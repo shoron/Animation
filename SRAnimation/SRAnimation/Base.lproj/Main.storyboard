@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xYE-kL-tPW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="OIH-Wa-smi">
+            <objects>
+                <viewController storyboardIdentifier="SRImageViewController" id="WFV-CC-Pfz" customClass="SRImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bsk-WR-11f"/>
+                        <viewControllerLayoutGuide type="bottom" id="m6p-QB-F7i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fYl-GV-7yq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ld3-WT-Ce0">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkw-Jm-KKD">
+                                <rect key="frame" x="219" y="295" width="162" height="30"/>
+                                <state key="normal" title="Present View Controller">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentButtonHandler:" destination="WFV-CC-Pfz" eventType="touchUpInside" id="Ttd-jQ-mEd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ld3-WT-Ce0" firstAttribute="leading" secondItem="fYl-GV-7yq" secondAttribute="leading" id="Rjz-8b-e39"/>
+                            <constraint firstItem="vkw-Jm-KKD" firstAttribute="centerX" secondItem="Ld3-WT-Ce0" secondAttribute="centerX" id="Xky-h0-RGU"/>
+                            <constraint firstItem="m6p-QB-F7i" firstAttribute="top" secondItem="Ld3-WT-Ce0" secondAttribute="bottom" id="cmm-XP-LLd"/>
+                            <constraint firstAttribute="trailing" secondItem="Ld3-WT-Ce0" secondAttribute="trailing" id="fgp-Dm-6BR"/>
+                            <constraint firstItem="vkw-Jm-KKD" firstAttribute="centerY" secondItem="Ld3-WT-Ce0" secondAttribute="centerY" id="gpA-gk-cr4"/>
+                            <constraint firstItem="Ld3-WT-Ce0" firstAttribute="top" secondItem="bsk-WR-11f" secondAttribute="bottom" id="vlT-G5-O9w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ld3-WT-Ce0" id="igs-v3-T52"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7o-tM-lzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957" y="624"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-cp-b3F">
+                                <rect key="frame" x="225" y="285" width="151" height="30"/>
+                                <state key="normal" title="push a view controller">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushButtonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4U-yb-Cuq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wZ3-cp-b3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FWZ-a2-Egp"/>
+                            <constraint firstItem="wZ3-cp-b3F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rol-OH-DQ0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FdM-wj-0m3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="624"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kPB-kZ-Dml">
+            <objects>
+                <navigationController id="xYE-kL-tPW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CkL-f2-zy1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CVo-Xx-Zhn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aET-OH-uHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="624"/>
+        </scene>
+        <!--Image Animations View Controller-->
+        <scene sceneID="IVD-K1-NQY">
+            <objects>
+                <viewController storyboardIdentifier="SRImageAnimationsViewController" id="SEa-3y-kRM" customClass="SRImageAnimationsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YIN-fF-URc"/>
+                        <viewControllerLayoutGuide type="bottom" id="mU3-Uk-lZg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GjF-xy-NUB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-CE-kRi">
+                                <rect key="frame" x="180" y="47" width="260" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="Usi-yS-z4V"/>
+                                    <constraint firstAttribute="height" constant="180" id="uXK-cj-otd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hO-qL-3IG">
+                                <rect key="frame" x="180" y="287" width="30" height="30"/>
+                                <state key="normal" title="淡化"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="NAM-U3-CBx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oe-Da-GIj">
+                                <rect key="frame" x="293" y="287" width="34" height="30"/>
+                                <state key="normal" title="push"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="hgw-91-Fxe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRS-0S-P1V">
+                                <rect key="frame" x="410" y="287" width="30" height="30"/>
+                                <state key="normal" title="揭开"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="ZRS-Xh-pVR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKx-iB-jKc">
+                                <rect key="frame" x="180" y="337" width="30" height="30"/>
+                                <state key="normal" title="覆盖"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="KXA-VD-ttD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE5-nN-615">
+                                <rect key="frame" x="395" y="337" width="45" height="30"/>
+                                <state key="normal" title="立方体"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="Kud-oK-RHj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-Uy-XCY">
+                                <rect key="frame" x="295" y="337" width="30" height="30"/>
+                                <state key="normal" title="吮吸"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="4VP-3d-TAC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TU-et-eUD">
+                                <rect key="frame" x="180" y="387" width="30" height="30"/>
+                                <state key="normal" title="翻转"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="njk-3D-hUE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUm-HD-AUD">
+                                <rect key="frame" x="295" y="387" width="30" height="30"/>
+                                <state key="normal" title="波纹"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="6U3-AM-D27"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgj-Cm-CDd">
+                                <rect key="frame" x="380" y="387" width="60" height="30"/>
+                                <state key="normal" title="翻页效果"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="pV1-GS-9Vh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpm-Tp-3x6">
+                                <rect key="frame" x="180" y="437" width="45" height="30"/>
+                                <state key="normal" title="开镜头"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="4T9-X5-diL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-Wp-qDF">
+                                <rect key="frame" x="395" y="437" width="45" height="30"/>
+                                <state key="normal" title="反翻页"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="lwl-Xk-fG0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lS1-KK-UTn">
+                                <rect key="frame" x="288" y="437" width="45" height="30"/>
+                                <state key="normal" title="关镜头"/>
+                                <connections>
+                                    <action selector="caTransitionButton:" destination="SEa-3y-kRM" eventType="touchUpInside" id="7f2-JP-yhI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGO-bo-P6S">
+                                <rect key="frame" x="180" y="487" width="45" height="30"/>
+                                <state key="normal" title="下翻页"/>
+                                <connections>
+                                    <action selector="viewAnimationButtonhandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="guw-vX-JUh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB4-Lo-qkN">
+                                <rect key="frame" x="395" y="537" width="45" height="30"/>
+                                <state key="normal" title="左翻转"/>
+                                <connections>
+                                    <action selector="viewAnimationButtonhandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="sdn-E3-yOW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrv-sy-lFH">
+                                <rect key="frame" x="288" y="487" width="45" height="30"/>
+                                <state key="normal" title="上翻页"/>
+                                <connections>
+                                    <action selector="viewAnimationButtonhandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="F4R-fD-WN3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne2-E6-Wzl">
+                                <rect key="frame" x="395" y="487" width="45" height="30"/>
+                                <state key="normal" title="右翻转"/>
+                                <connections>
+                                    <action selector="viewAnimationButtonhandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="hh9-BB-Ra1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-8s-KOh" userLabel="放大(无效)">
+                                <rect key="frame" x="180" y="537" width="71" height="30"/>
+                                <state key="normal" title="放大(无效)"/>
+                                <connections>
+                                    <action selector="transformButtonHandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="W4b-4G-v2s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCm-Ui-WSo">
+                                <rect key="frame" x="280" y="537" width="60" height="30"/>
+                                <state key="normal" title="放大缩小"/>
+                                <connections>
+                                    <action selector="transformButtonHandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="Akx-IW-0Ce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8a-ju-VEw">
+                                <rect key="frame" x="295" y="555" width="30" height="30"/>
+                                <state key="normal" title="exit"/>
+                                <connections>
+                                    <action selector="exitButtonHandler:" destination="SEa-3y-kRM" eventType="touchUpInside" id="CAG-6X-CC0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主要有两大类的动画一类是CAAnimation动画，一类是UIVIew自带动画" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5a-Xm-JD2">
+                                <rect key="frame" x="180" y="235" width="260" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ne2-E6-Wzl" firstAttribute="trailing" secondItem="vRS-0S-P1V" secondAttribute="trailing" id="1Qy-bf-Agk"/>
+                            <constraint firstItem="5Oe-Da-GIj" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="1dt-ge-d20"/>
+                            <constraint firstItem="d5a-Xm-JD2" firstAttribute="trailing" secondItem="EHh-CE-kRi" secondAttribute="trailing" id="2AI-er-xvZ"/>
+                            <constraint firstItem="d5a-Xm-JD2" firstAttribute="leading" secondItem="EHh-CE-kRi" secondAttribute="leading" id="3JW-BA-1I2"/>
+                            <constraint firstItem="AB4-Lo-qkN" firstAttribute="top" secondItem="ne2-E6-Wzl" secondAttribute="top" id="8zX-zg-Bc9"/>
+                            <constraint firstItem="BKx-iB-jKc" firstAttribute="leading" secondItem="1hO-qL-3IG" secondAttribute="leading" id="9ck-7P-ETY"/>
+                            <constraint firstItem="mpm-Tp-3x6" firstAttribute="top" secondItem="4TU-et-eUD" secondAttribute="bottom" constant="20" id="Btn-hX-BAI"/>
+                            <constraint firstItem="r8a-ju-VEw" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="CbW-OF-ow1"/>
+                            <constraint firstItem="5Oe-Da-GIj" firstAttribute="top" secondItem="1hO-qL-3IG" secondAttribute="top" id="Cca-R3-Wl5"/>
+                            <constraint firstItem="c9x-Uy-XCY" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="KhA-WW-bPN"/>
+                            <constraint firstItem="2sA-Wp-qDF" firstAttribute="trailing" secondItem="tgj-Cm-CDd" secondAttribute="trailing" id="Lsd-nd-v90"/>
+                            <constraint firstItem="EHh-CE-kRi" firstAttribute="centerX" secondItem="GjF-xy-NUB" secondAttribute="centerX" constant="10" id="MFZ-qq-mBx"/>
+                            <constraint firstItem="1hO-qL-3IG" firstAttribute="leading" secondItem="EHh-CE-kRi" secondAttribute="leading" id="MGP-k8-dzr"/>
+                            <constraint firstItem="c9x-Uy-XCY" firstAttribute="top" secondItem="BKx-iB-jKc" secondAttribute="top" id="MqN-Xr-Ta9"/>
+                            <constraint firstItem="0fg-8s-KOh" firstAttribute="top" secondItem="zGO-bo-P6S" secondAttribute="bottom" constant="20" id="Mtp-0I-5SO"/>
+                            <constraint firstItem="vRS-0S-P1V" firstAttribute="trailing" secondItem="EHh-CE-kRi" secondAttribute="trailing" id="NFx-EM-hlv"/>
+                            <constraint firstItem="4TU-et-eUD" firstAttribute="leading" secondItem="BKx-iB-jKc" secondAttribute="leading" id="OrG-oB-q3u"/>
+                            <constraint firstItem="AB4-Lo-qkN" firstAttribute="leading" secondItem="ne2-E6-Wzl" secondAttribute="trailing" constant="20" id="PgC-Ne-ARX"/>
+                            <constraint firstItem="tgj-Cm-CDd" firstAttribute="trailing" secondItem="vRS-0S-P1V" secondAttribute="trailing" id="Ptq-7g-0Rq"/>
+                            <constraint firstItem="ne2-E6-Wzl" firstAttribute="top" secondItem="zGO-bo-P6S" secondAttribute="top" id="Q9x-dV-ZTq"/>
+                            <constraint firstItem="lS1-KK-UTn" firstAttribute="top" secondItem="mpm-Tp-3x6" secondAttribute="top" id="QWF-RN-BhQ"/>
+                            <constraint firstItem="cE5-nN-615" firstAttribute="top" secondItem="BKx-iB-jKc" secondAttribute="top" id="Qzw-By-JTa"/>
+                            <constraint firstItem="0fg-8s-KOh" firstAttribute="leading" secondItem="zGO-bo-P6S" secondAttribute="leading" id="RWp-h5-Dso"/>
+                            <constraint firstItem="vrv-sy-lFH" firstAttribute="top" secondItem="zGO-bo-P6S" secondAttribute="top" id="SVB-HB-3a6"/>
+                            <constraint firstItem="4TU-et-eUD" firstAttribute="top" secondItem="BKx-iB-jKc" secondAttribute="bottom" constant="20" id="Saa-8q-uOy"/>
+                            <constraint firstItem="vRS-0S-P1V" firstAttribute="top" secondItem="1hO-qL-3IG" secondAttribute="top" id="Sb3-nx-MEP"/>
+                            <constraint firstItem="r8a-ju-VEw" firstAttribute="centerY" secondItem="EHh-CE-kRi" secondAttribute="centerY" id="Sy8-Yu-AMl"/>
+                            <constraint firstItem="vrv-sy-lFH" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="XhP-df-a1l"/>
+                            <constraint firstItem="d5a-Xm-JD2" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="YkJ-pf-szV"/>
+                            <constraint firstItem="mU3-Uk-lZg" firstAttribute="top" secondItem="r8a-ju-VEw" secondAttribute="bottom" constant="15" id="Ylf-aV-N0l"/>
+                            <constraint firstItem="BKx-iB-jKc" firstAttribute="top" secondItem="1hO-qL-3IG" secondAttribute="bottom" constant="20" id="YpB-Xv-PAn"/>
+                            <constraint firstItem="d5a-Xm-JD2" firstAttribute="top" secondItem="EHh-CE-kRi" secondAttribute="bottom" constant="8" id="a8a-67-ADx"/>
+                            <constraint firstItem="AB4-Lo-qkN" firstAttribute="trailing" secondItem="ne2-E6-Wzl" secondAttribute="trailing" id="bfR-Jq-8yN"/>
+                            <constraint firstItem="zGO-bo-P6S" firstAttribute="leading" secondItem="mpm-Tp-3x6" secondAttribute="leading" id="dFm-FO-If1"/>
+                            <constraint firstItem="aUm-HD-AUD" firstAttribute="top" secondItem="4TU-et-eUD" secondAttribute="top" id="dk6-sd-7Mg"/>
+                            <constraint firstItem="AB4-Lo-qkN" firstAttribute="top" secondItem="0fg-8s-KOh" secondAttribute="top" id="fFB-Em-NeT"/>
+                            <constraint firstItem="cE5-nN-615" firstAttribute="trailing" secondItem="vRS-0S-P1V" secondAttribute="trailing" id="hWa-tr-cUO"/>
+                            <constraint firstItem="zGO-bo-P6S" firstAttribute="top" secondItem="mpm-Tp-3x6" secondAttribute="bottom" constant="20" id="i7W-t3-NeI"/>
+                            <constraint firstItem="1hO-qL-3IG" firstAttribute="top" secondItem="EHh-CE-kRi" secondAttribute="bottom" constant="60" id="j4K-F6-Uz7"/>
+                            <constraint firstItem="kCm-Ui-WSo" firstAttribute="top" secondItem="0fg-8s-KOh" secondAttribute="top" id="jaY-bL-XLU"/>
+                            <constraint firstItem="kCm-Ui-WSo" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="nUC-4u-Yb6"/>
+                            <constraint firstItem="EHh-CE-kRi" firstAttribute="top" secondItem="YIN-fF-URc" secondAttribute="bottom" constant="27" id="pKf-lD-7cv"/>
+                            <constraint firstItem="tgj-Cm-CDd" firstAttribute="top" secondItem="aUm-HD-AUD" secondAttribute="top" id="qLf-jL-EKC"/>
+                            <constraint firstItem="2sA-Wp-qDF" firstAttribute="top" secondItem="mpm-Tp-3x6" secondAttribute="top" id="qcE-Xd-afU"/>
+                            <constraint firstItem="r8a-ju-VEw" firstAttribute="leading" secondItem="EHh-CE-kRi" secondAttribute="trailing" constant="56" id="s19-YM-sGH"/>
+                            <constraint firstItem="mpm-Tp-3x6" firstAttribute="leading" secondItem="4TU-et-eUD" secondAttribute="leading" id="uDu-3r-u6G"/>
+                            <constraint firstItem="lS1-KK-UTn" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="vHw-Tg-r0X"/>
+                            <constraint firstItem="aUm-HD-AUD" firstAttribute="centerX" secondItem="EHh-CE-kRi" secondAttribute="centerX" id="wxA-gm-TDR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YkJ-pf-szV"/>
+                                <exclude reference="Sy8-Yu-AMl"/>
+                                <exclude reference="s19-YM-sGH"/>
+                                <exclude reference="8zX-zg-Bc9"/>
+                                <exclude reference="PgC-Ne-ARX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="EHh-CE-kRi" id="Bhk-BI-XwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eA7-av-lHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="1292"/>
+        </scene>
+    </scenes>
+</document>
